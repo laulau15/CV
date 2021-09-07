@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #FDF7FF ;
+}
+
+.home-nav{
+    height: 5rem;
+    width: 150%;
+    display: block;
+    justify-content: flex-start;
+    font-weight: 300;
+    font-size: 20px;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    z-index: 10;
+    padding-top: 15px;
+}
+.home-nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5vh;
+    padding: 0vh 4vh;
+    font-family: 'Spartan', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.nav-link{
+    text-decoration: none;
+    margin-right: 50px;
+    position: relative;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+    color: #111;
+}
+
+.nav-link::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left:0;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    transform-origin: right top;
+    transform: scale(0,1);
+    transition: color 0.1s, transform 0.2s ease-out;
+}
+
+.nav-link:active::before{
+    background-color: #FDF7FF;
+}
+.nav-link:hover::before,.nav-link:focus::before{
+    transform-origin: left top;
+    transform: scale(1,1);
+}
+.home-container {
+    height: 100vh;
+    width: 100%;
+    background: #FDF7FF;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 10vh 45vh 4vh 15vh 6vh 20vh;
+}
+
+.title, p, .compétences, .experience, .parcours {
+    margin-left: 10vh;
+}
+p, .compétences, .experience, .parcours {
+    margin-right: 10vh;
+}
+
+.hello, .compétences {
+    font-size: 20px;
+    color: #4A4453;
+}
+.hello, .compétences, h2, p, .experience, .parcours, .card-compétences {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.hello {
+    grid-row: 3/4;
+    grid-column: 1/2;
+
+}
+.title{
+    font-size: 80px;
+    font-weight: 300;
+    grid-row: 4/5;
+    grid-column: 1/2;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #382F49;
+    animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.compétences{
+    grid-row: 5/6;
+    grid-column: 1/2;
+    margin-top: 4vh;
+}
+
+.image-cont{
+    grid-column: 2/3;
+    position: relative;
+}
+.Laure{
+    position: absolute;
+    width: 50%;
+    top: 20vh;
+    left: 20vh
+}
+h2 {
+    text-align: center;
+    font-size: 50px;
+    margin: 5vh 0;
+    color: #564C68;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+p{
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: justify;
+}
+#section-qui a {
+    color: #111;
+    cursor: pointer;
+}
+.dual-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#section-qui{
+    grid-column: 1/2;
+}
+#section-compétences{
+    grid-column: 2/3;
+}
+.experience, .parcours {
+    margin-bottom: 4vh;
+}
+.experience ul, .parcours ul {
+    margin-left: 4vh
+}
+
+.card-compétences {
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    width: 70vh;
+    background: #DDD1F2;
+    color: #333;
+    transition: transform 0.3s ease-out;
+    box-shadow: 0 0 10px #4A4453;
+    background: white;
+    transition: transform 0.25s ease-in-out;
+    position: relative;
+    display: block;
+    margin: 3vh auto;
+}
+
+.card-compétences:hover {
+    transform: translateY(-5px);
+}
+.card-compétences ul {
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+.card-compétences h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.digital {
+    grid-column: 2/3;
+}
+.parcours, .experience {
+    width: 90%;
+    margin-bottom: 37.5px;
+    cursor: pointer;
+    border: 1px solid #333;
+    position: relative;
+}
+
+.cont-parcours, .cont-exp {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    background: white;
+    transition: transform 0.25s ease-in-out;
+    position: relative;
+    transform: translate(10px, -10px);
+}
+.cont-parcours:hover, .cont-exp:hover {
+    transform: translate(0,0);
+}
+.master2, .AsTRES{
+    background: #DDD1F2;
+}
+.master1, .LISE {
+    background: #AFBDE3;
+}
+.licence, .Anywhr {
+    background: #7AAACD;
+}
+.bac, .SG {
+    background: #4397AE;
+}
+.titre-section-bloc {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+footer p {
+    text-align: center;
+    margin: 2vh 0;
+}
